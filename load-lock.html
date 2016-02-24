@@ -1,0 +1,108 @@
+
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+A Polymer element for easily adding an unsaved changes warning to your webapp
+when its tab is closed.
+
+Example:
+
+    <load-lock></load-lock>
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="load-lock">
+  <script>
+    Polymer({
+      is: 'load-lock',
+
+      properties: {
+        /**
+         * Whether to eschew adding this element as a global variable on `window`.
+         */
+        noGlobal: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
+         * Whether the tab/window is currently loadlocked.
+         * @type {Boolean}
+         */
+        locked: {
+          type: Boolean,
+          value: false
+        },
+
+        /**
+         * The message to be shown when the user tries to close the tab/window
+         * when loadlocked.
+         * @type {String}
+         */
+        message: {
+          type: String
+        },
+
+        /**
+         * The default message to be shown if one was not specified when
+         * the loadlock was set.
+         * @type {String}
+         */
+        defaultMessage: {
+          value: 'You have unsaved changes. Do you want to leave without saving?'
+        }
+      },
+
+      // Element Lifecycle
+
+      ready: function() {
+        if (!this.noGlobal) {
+          window.LoadLock = this;
+        }
+
+        window.onbeforeunload = this._checkLocks.bind(this);
+      },
+
+      /**
+       * Checks if any loadlocks are in play and returns their messages.
+       */
+      _checkLocks: function(event) {
+        if (this.locked) {
+          this.fire('load-lock-caught');
+          return this.message || this.defaultMessage;
+        }
+      },
+
+      // Element Behavior
+
+      /**
+       * Sets the loadlock with a message. This message will be shown if
+       * the user tries to close the tab/window before the lock is cleared.
+       *
+       * @param {string} message Message to be shown when the lock is triggered.
+       */
+      addLock: function(message) {
+        this.locked = true;
+        this.message = message;
+      },
+
+      /**
+       * Removes the loadlock, if it exists.
+       */
+      removeLock: function() {
+        this.locked = false;
+        this.message = null;
+      },
+
+      /**
+       * The `load-lock-caught` event is fired whenever a user tries to
+       * close a loadlocked tab/window.
+       *
+       * @event load-lock-caught
+       */
+
+    });
+  </script>
+</dom-module>
