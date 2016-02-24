@@ -1,6 +1,6 @@
 # load-lock
 
-An element providing a starting point for your own reusable Polymer elements.
+A Polymer element for easily adding an unsaved changes warning to your webapp when its tab is closed. 
 
 
 ## Dependencies
