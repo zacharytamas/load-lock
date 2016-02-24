@@ -1,0 +1,36 @@
+{
+  "name": "load-lock",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "load-lock.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  },
+  "_release": "0883081c8e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0883081c8e87bbb77fa9df83a16df95d6f8d2508"
+  },
+  "_source": "git@github.com:zacharytamas/load-lock.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:zacharytamas/load-lock",
+  "_direct": true
+}
