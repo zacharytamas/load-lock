@@ -1,18 +1,18 @@
 {
   "name": "load-lock",
-  "version": "1.0.7",
+  "version": "0.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Zachary Jones <zacharytamas@gmail.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "A Polymer element for easily adding an unsaved changes warning to your webapp when its tab is closed.",
   "keywords": [
     "web-component",
-    "polymer",
-    "seed"
+    "web-components",
+    "polymer"
   ],
   "main": "load-lock.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/zacharytamas/load-lock/",
   "ignore": [
     "/.*",
     "/test/"
