@@ -11,7 +11,7 @@
     "polymer"
   ],
   "main": "load-lock.html",
-  "license": "http://polymer.github.io/LICENSE.txt",
+  "license": "MIT",
   "homepage": "https://github.com/zacharytamas/load-lock/",
   "ignore": [
     "/.*",

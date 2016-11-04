@@ -1,8 +1,8 @@
 # load-lock
 
-A Polymer element for easily adding an unsaved changes warning to your webapp when its tab is closed.
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/zacharytamas/load-lock)
 
-### [Documentation here](http://zacharytamas.github.io/load-lock/)
+A Polymer element for easily adding an unsaved changes warning to your webapp when its tab is closed.
 
 ## Dependencies
 
